@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Switcher from "../components/Switcher";
+import IndexPage from "../components/Index/IndexPage.astro";
+import {Pages} from "../data";
+
+const {metaTitle, metaDescription} = Pages.find(p => p.uri === '/')
+---
+
+
+<Layout title={metaTitle} description={metaDescription}>
+
+	<IndexPage />
+
+</Layout>
