@@ -1,4 +1,5 @@
 ---
+import  services  from '../services';
 function toggleMenu() {
 	document
 		.getElementById('isToggle')
@@ -14,6 +15,7 @@ function toggleMenu() {
 		}
 	}
 }
+
 ---
 
 <!-- Start Navbar -->
@@ -95,31 +97,17 @@ function toggleMenu() {
 
 				<li
 					class='has-submenu parent-menu-item'>
-					<a href='/services'>Услуги</a
+					<a href='/services'>Услуги</a>
 					><span class='menu-arrow'
 					></span>
-					<ul class='submenu expanded'>
-						<li
-							><a
-								href='/documentation.html'
-								class='sub-menu-item'
-								>Documentation</a
-							></li
-						>
-						<li
-							><a
-								href='/changelog.html'
-								class='sub-menu-item'
-								>Changelog</a
-							></li
-						>
-						<li
-							><a
-								href='/widget.html'
-								class='sub-menu-item'
-								>Widget</a
-							></li
-						>
+					<ul class='submenu'>
+						{
+							services.map(service => (
+								<li>
+									<a href={`/services/${service.slug}`} class='sub-menu-item'>{service.title}</a>
+								</li>
+							))
+						}
 					</ul>
 				</li>
 				<li
