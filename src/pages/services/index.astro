@@ -1,0 +1,14 @@
+---
+import services from '../../services';
+
+const firstService = services[0];
+
+if (firstService) {
+    return Astro.redirect(`/services/${firstService.slug}`, 301);
+}
+
+return new Response(null, {
+    status: 404,
+    statusText: 'Not Found',
+});
+---

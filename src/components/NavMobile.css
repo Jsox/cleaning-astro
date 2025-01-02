@@ -1,0 +1,63 @@
+/* Mobile menu styles */
+.mobile-menu-item {
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.mobile-submenu {
+    display: none;
+    padding-left: 1.5rem;
+}
+
+.mobile-submenu.active {
+    display: block;
+}
+
+/* Mobile menu toggle animation */
+.navbar-toggle .lines {
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle.open .lines span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.open .lines span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.open .lines span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+    #navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 1000;
+    }
+
+    #navigation.block {
+        display: block;
+    }
+
+    .navigation-menu {
+        flex-direction: column;
+    }
+
+    .has-submenu .menu-arrow {
+        display: inline-block;
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .has-submenu.active .menu-arrow {
+        transform: rotate(180deg);
+    }
+}
