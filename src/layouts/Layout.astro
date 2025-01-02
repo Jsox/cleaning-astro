@@ -8,8 +8,8 @@ import ContactModal from '../components/ContactModal.astro';
 // import { persistentAtom } from '@nanostores/persistent'
 
 export interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
 const { title, description } = Astro.props;
@@ -19,64 +19,32 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html
-	lang='ru'
-	class={`dark scroll-smooth`}
-	dir='ltr'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta
-			name='description'
-			content={description}
-		/>
-		<meta
-			name='viewport'
-			content='width=device-width'
-		/>
-		<link
-			rel='icon'
-			type='image/svg+xml'
-			href='/favicon.svg'
-		/>
-		<meta
-			name='generator'
-			content={Astro.generator}
-		/>
-		<title>{title}</title>
+<html lang="ru" class={`dark scroll-smooth`} dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
 
-		<link
-			href='/assets/libs/@iconscout/unicons/css/line.css'
-			type='text/css'
-			rel='stylesheet'
-		/>
-		<link
-			rel='stylesheet'
-			href='/assets/css/icons.css'
-		/>
-		<link
-			rel='stylesheet'
-			href='/assets/css/tailwind.css'
-		/>
-	</head>
-	<body
-		class='duration-500 font-nunito text-base text-black dark:text-white dark:bg-slate-900'>
-		<NavCenter />
-		<slot />
-		<Switcher client:load />
-		<ToTop />
-		<Footer />
-		<ContactModal />
-		<script
-			is:inline
-			src='/assets/libs/feather-icons/feather.min.js'
-		></script>
-		<script
-			is:inline
-			src='/assets/js/plugins.init.js'
-		></script>
-		<script
-			is:inline
-			src='/assets/js/app.js'
-		></script>
-	</body>
+        <link
+            href="/assets/libs/@iconscout/unicons/css/line.css"
+            type="text/css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/assets/css/icons.css" />
+        <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    </head>
+    <body class="font-nunito text-base text-black duration-500 dark:bg-slate-900 dark:text-white">
+        <NavCenter />
+        <slot />
+        <Switcher client:load />
+        <ToTop />
+        <Footer />
+        <ContactModal />
+        <script is:inline src="/assets/libs/feather-icons/feather.min.js"></script>
+        <script is:inline src="/assets/js/plugins.init.js"></script>
+        <script is:inline src="/assets/js/app.js"></script>
+    </body>
 </html>

@@ -1,35 +1,51 @@
 ---
-import Hero from "./Hero.astro";
-import {Image} from "@astrojs/image/components";
-import IndexOffice from "./IndexOffice.astro";
-import IndexImagesSlider from "./IndexImagesSlider.astro";
+import Hero from './Hero.astro';
+import { Image } from '@astrojs/image/components';
+import IndexOffice from './IndexOffice.astro';
+import IndexImagesSlider from './IndexImagesSlider.astro';
 ---
+
 <Hero />
 
 <!-- STart -->
-<section class="relative md:py-24 py-16">
+<section class="relative py-16 md:py-24">
     <div class="container">
-        <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+        <div class="grid grid-cols-1 items-center gap-[30px] md:grid-cols-12">
             <div class="md:col-span-6">
                 <div class="lg:mr-8">
                     <Image
-                            format="avif"
-                            width={500}
-                            quality={50}
-                            aspectRatio={1}
-                            src="/assets/images/shape-image.png"
-                            alt="карта" />
+                        format="avif"
+                        width={500}
+                        quality={50}
+                        aspectRatio={1}
+                        src="/assets/images/shape-image.png"
+                        alt="карта"
+                    />
                 </div>
             </div>
 
-            <div class="md:col-span-6 mt-8 md:mt-0">
+            <div class="mt-8 md:col-span-6 md:mt-0">
                 <div class="lg:ml-5">
-                    <h6 class="text-indigo-600 text-sm font-bold uppercase mb-2">Our History</h6>
-                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">“Sweet as the Moment When <br> the coworking Went 'Pop”</h3>
+                    <h6 class="mb-2 text-sm font-bold uppercase text-indigo-600">Our History</h6>
+                    <h3
+                        class="mb-4 text-2xl font-semibold leading-normal md:text-3xl md:leading-normal"
+                    >
+                        “Sweet as the Moment When <br /> the coworking Went 'Pop”
+                    </h3>
 
-                    <p class="text-slate-400 max-w-xl mb-6">Get instant helpful resources about anything on the go, easily implement secure money transfer solutions, boost your daily efficiency, connect to other app users and create your own Techwind network, and much more with just a few taps. commodo consequat. Duis aute irure.</p>
+                    <p class="mb-6 max-w-xl text-slate-400">
+                        Get instant helpful resources about anything on the go, easily implement
+                        secure money transfer solutions, boost your daily efficiency, connect to
+                        other app users and create your own Techwind network, and much more with
+                        just a few taps. commodo consequat. Duis aute irure.
+                    </p>
 
-                    <a href="" class="btn bg-indigo-600/5 hover:bg-indigo-600 border-indigo-600/10 hover:border-indigo-600 text-indigo-600 hover:text-white rounded-full">Get Started</a>
+                    <a
+                        href=""
+                        class="btn rounded-full border-indigo-600/10 bg-indigo-600/5 text-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
+                    >
+                        Get Started
+                    </a>
                 </div>
             </div>
         </div>
@@ -39,125 +55,203 @@ import IndexImagesSlider from "./IndexImagesSlider.astro";
 
     <!--<IndexImagesSlider />-->
 
-    <div class="container lg:mt-24 mt-16">
+    <div class="container mt-16 lg:mt-24">
         <div class="grid grid-cols-1 pb-8 text-center">
-            <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Our Services</h3>
+            <h3 class="mb-4 text-2xl font-semibold leading-normal md:text-3xl md:leading-normal">
+                Our Services
+            </h3>
 
-            <p class="text-slate-400 max-w-xl mx-auto">Start working with Tailwind CSS that can provide everything you need to generate awareness, drive traffic, connect.</p>
+            <p class="mx-auto max-w-xl text-slate-400">
+                Start working with Tailwind CSS that can provide everything you need to generate
+                awareness, drive traffic, connect.
+            </p>
         </div><!--end grid-->
 
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-4 gap-[30px]">
+        <div class="mt-4 grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
             <!-- Content -->
-            <div class="group relative lg:px-10 mt-4 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden text-center">
-                <div class="relative overflow-hidden text-transparent -m-3">
-                    <i data-feather="hexagon" class="h-32 w-32 fill-indigo-600/5 mx-auto"></i>
-                    <div class="absolute top-2/4 -translate-y-2/4 left-0 right-0 mx-auto text-indigo-600 rounded-xl transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+            <div
+                class="group relative mt-4 overflow-hidden rounded-xl bg-white text-center transition-all duration-500 ease-in-out dark:bg-slate-900 lg:px-10"
+            >
+                <div class="relative -m-3 overflow-hidden text-transparent">
+                    <i data-feather="hexagon" class="mx-auto h-32 w-32 fill-indigo-600/5"></i>
+                    <div
+                        class="absolute left-0 right-0 top-2/4 mx-auto flex -translate-y-2/4 items-center justify-center rounded-xl align-middle text-3xl text-indigo-600 transition-all duration-500 ease-in-out"
+                    >
                         <i class="uil uil-wifi"></i>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <a href="" class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600">Free Internet</a>
-                    <p class="text-slate-400 transition-all duration-500 ease-in-out mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                    <a
+                        href=""
+                        class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600"
+                    >
+                        Free Internet
+                    </a>
+                    <p class="mt-3 text-slate-400 transition-all duration-500 ease-in-out">
+                        If the distribution of letters and 'words' is random, the reader will not be
+                        distracted from making.
+                    </p>
                 </div>
             </div>
             <!-- Content -->
 
             <!-- Content -->
-            <div class="group relative lg:px-10 mt-4 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden text-center">
-                <div class="relative overflow-hidden text-transparent -m-3">
-                    <i data-feather="hexagon" class="h-32 w-32 fill-indigo-600/5 mx-auto"></i>
-                    <div class="absolute top-2/4 -translate-y-2/4 left-0 right-0 mx-auto text-indigo-600 rounded-xl transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+            <div
+                class="group relative mt-4 overflow-hidden rounded-xl bg-white text-center transition-all duration-500 ease-in-out dark:bg-slate-900 lg:px-10"
+            >
+                <div class="relative -m-3 overflow-hidden text-transparent">
+                    <i data-feather="hexagon" class="mx-auto h-32 w-32 fill-indigo-600/5"></i>
+                    <div
+                        class="absolute left-0 right-0 top-2/4 mx-auto flex -translate-y-2/4 items-center justify-center rounded-xl align-middle text-3xl text-indigo-600 transition-all duration-500 ease-in-out"
+                    >
                         <i class="uil uil-users-alt"></i>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <a href="" class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600">Group Events</a>
-                    <p class="text-slate-400 transition-all duration-500 ease-in-out mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                    <a
+                        href=""
+                        class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600"
+                    >
+                        Group Events
+                    </a>
+                    <p class="mt-3 text-slate-400 transition-all duration-500 ease-in-out">
+                        If the distribution of letters and 'words' is random, the reader will not be
+                        distracted from making.
+                    </p>
                 </div>
             </div>
             <!-- Content -->
 
             <!-- Content -->
-            <div class="group relative lg:px-10 mt-4 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden text-center">
-                <div class="relative overflow-hidden text-transparent -m-3">
-                    <i data-feather="hexagon" class="h-32 w-32 fill-indigo-600/5 mx-auto"></i>
-                    <div class="absolute top-2/4 -translate-y-2/4 left-0 right-0 mx-auto text-indigo-600 rounded-xl transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+            <div
+                class="group relative mt-4 overflow-hidden rounded-xl bg-white text-center transition-all duration-500 ease-in-out dark:bg-slate-900 lg:px-10"
+            >
+                <div class="relative -m-3 overflow-hidden text-transparent">
+                    <i data-feather="hexagon" class="mx-auto h-32 w-32 fill-indigo-600/5"></i>
+                    <div
+                        class="absolute left-0 right-0 top-2/4 mx-auto flex -translate-y-2/4 items-center justify-center rounded-xl align-middle text-3xl text-indigo-600 transition-all duration-500 ease-in-out"
+                    >
                         <i class="uil uil-crop-alt-rotate-left"></i>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <a href="" class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600">Meeting Room</a>
-                    <p class="text-slate-400 transition-all duration-500 ease-in-out mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                    <a
+                        href=""
+                        class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600"
+                    >
+                        Meeting Room
+                    </a>
+                    <p class="mt-3 text-slate-400 transition-all duration-500 ease-in-out">
+                        If the distribution of letters and 'words' is random, the reader will not be
+                        distracted from making.
+                    </p>
                 </div>
             </div>
             <!-- Content -->
 
             <!-- Content -->
-            <div class="group relative lg:px-10 mt-4 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden text-center">
-                <div class="relative overflow-hidden text-transparent -m-3">
-                    <i data-feather="hexagon" class="h-32 w-32 fill-indigo-600/5 mx-auto"></i>
-                    <div class="absolute top-2/4 -translate-y-2/4 left-0 right-0 mx-auto text-indigo-600 rounded-xl transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+            <div
+                class="group relative mt-4 overflow-hidden rounded-xl bg-white text-center transition-all duration-500 ease-in-out dark:bg-slate-900 lg:px-10"
+            >
+                <div class="relative -m-3 overflow-hidden text-transparent">
+                    <i data-feather="hexagon" class="mx-auto h-32 w-32 fill-indigo-600/5"></i>
+                    <div
+                        class="absolute left-0 right-0 top-2/4 mx-auto flex -translate-y-2/4 items-center justify-center rounded-xl align-middle text-3xl text-indigo-600 transition-all duration-500 ease-in-out"
+                    >
                         <i class="uil uil-glass-tea"></i>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <a href="" class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600">Coffee & Tea</a>
-                    <p class="text-slate-400 transition-all duration-500 ease-in-out mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                    <a
+                        href=""
+                        class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600"
+                    >
+                        Coffee & Tea
+                    </a>
+                    <p class="mt-3 text-slate-400 transition-all duration-500 ease-in-out">
+                        If the distribution of letters and 'words' is random, the reader will not be
+                        distracted from making.
+                    </p>
                 </div>
             </div>
             <!-- Content -->
 
             <!-- Content -->
-            <div class="group relative lg:px-10 mt-4 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden text-center">
-                <div class="relative overflow-hidden text-transparent -m-3">
-                    <i data-feather="hexagon" class="h-32 w-32 fill-indigo-600/5 mx-auto"></i>
-                    <div class="absolute top-2/4 -translate-y-2/4 left-0 right-0 mx-auto text-indigo-600 rounded-xl transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+            <div
+                class="group relative mt-4 overflow-hidden rounded-xl bg-white text-center transition-all duration-500 ease-in-out dark:bg-slate-900 lg:px-10"
+            >
+                <div class="relative -m-3 overflow-hidden text-transparent">
+                    <i data-feather="hexagon" class="mx-auto h-32 w-32 fill-indigo-600/5"></i>
+                    <div
+                        class="absolute left-0 right-0 top-2/4 mx-auto flex -translate-y-2/4 items-center justify-center rounded-xl align-middle text-3xl text-indigo-600 transition-all duration-500 ease-in-out"
+                    >
                         <i class="uil uil-parking-circle"></i>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <a href="" class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600">Free Parking</a>
-                    <p class="text-slate-400 transition-all duration-500 ease-in-out mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                    <a
+                        href=""
+                        class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600"
+                    >
+                        Free Parking
+                    </a>
+                    <p class="mt-3 text-slate-400 transition-all duration-500 ease-in-out">
+                        If the distribution of letters and 'words' is random, the reader will not be
+                        distracted from making.
+                    </p>
                 </div>
             </div>
             <!-- Content -->
 
             <!-- Content -->
-            <div class="group relative lg:px-10 mt-4 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden text-center">
-                <div class="relative overflow-hidden text-transparent -m-3">
-                    <i data-feather="hexagon" class="h-32 w-32 fill-indigo-600/5 mx-auto"></i>
-                    <div class="absolute top-2/4 -translate-y-2/4 left-0 right-0 mx-auto text-indigo-600 rounded-xl transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
+            <div
+                class="group relative mt-4 overflow-hidden rounded-xl bg-white text-center transition-all duration-500 ease-in-out dark:bg-slate-900 lg:px-10"
+            >
+                <div class="relative -m-3 overflow-hidden text-transparent">
+                    <i data-feather="hexagon" class="mx-auto h-32 w-32 fill-indigo-600/5"></i>
+                    <div
+                        class="absolute left-0 right-0 top-2/4 mx-auto flex -translate-y-2/4 items-center justify-center rounded-xl align-middle text-3xl text-indigo-600 transition-all duration-500 ease-in-out"
+                    >
                         <i class="uil uil-process"></i>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <a href="" class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600">Relax Room</a>
-                    <p class="text-slate-400 transition-all duration-500 ease-in-out mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                    <a
+                        href=""
+                        class="text-xl font-medium transition-all duration-500 ease-in-out hover:text-indigo-600"
+                    >
+                        Relax Room
+                    </a>
+                    <p class="mt-3 text-slate-400 transition-all duration-500 ease-in-out">
+                        If the distribution of letters and 'words' is random, the reader will not be
+                        distracted from making.
+                    </p>
                 </div>
             </div>
             <!-- Content -->
         </div><!--end grid-->
     </div><!--end container-->
-
 </section><!--end section-->
 <!-- End -->
 
 <!-- Start -->
-<section class="relative md:py-24 py-16 md:pt-0 pt-0">
+<section class="relative py-16 pt-0 md:py-24 md:pt-0">
     <div class="container">
         <div class="grid grid-cols-1 justify-center">
             <div class="relative z-1">
-                <div class="grid lg:grid-cols-12 grid-cols-1 md:text-left text-center justify-center">
-                    <div class="lg:col-start-2 lg:col-span-10">
+                <div
+                    class="grid grid-cols-1 justify-center text-center md:text-left lg:grid-cols-12"
+                >
+                    <div class="lg:col-span-10 lg:col-start-2">
                         <div class="relative">
                             <video autoplay loop muted class="rounded-md shadow-lg">
-                                <source src="/assets/index-hero-video.mp4" type="video/mp4">
+                                <source src="/assets/index-hero-video.mp4" type="video/mp4" />
                                 скачать
                                 <a href="/assets/index-hero-video.mp4">видео</a>
                             </video>
@@ -172,24 +266,32 @@ import IndexImagesSlider from "./IndexImagesSlider.astro";
                     </div>
                 </div>
                 <div class="content md:mt-8">
-                    <div class="grid lg:grid-cols-12 grid-cols-1 md:text-left text-center justify-center">
-                        <div class="lg:col-start-2 lg:col-span-10">
-                            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
+                    <div
+                        class="grid grid-cols-1 justify-center text-center md:text-left lg:grid-cols-12"
+                    >
+                        <div class="lg:col-span-10 lg:col-start-2">
+                            <div class="grid grid-cols-1 items-center gap-[30px] md:grid-cols-2">
                                 <div class="mt-8">
                                     <div class="section-title text-md-start">
-                                        <h6 class="text-white/50 text-lg font-semibold">Customers needs</h6>
+                                        <h6 class="text-lg font-semibold text-white/50">
+                                            Customers needs
+                                        </h6>
                                         <h3
-                                                class="md:text-3xl text-2xl md:leading-normal leading-normal font-semibold text-white mt-2">
-                                            Spaces for every size <br> and type of need.</h3>
+                                            class="mt-2 text-2xl font-semibold leading-normal text-white md:text-3xl md:leading-normal"
+                                        >
+                                            Spaces for every size <br /> and type of need.
+                                        </h3>
                                     </div>
                                 </div>
 
                                 <div class="section-title text-md-start">
-                                    <p class="text-white/50 max-w-xl mx-auto mb-2">Start working with Techwind
-                                        that can provide everything you need to generate awareness, drive
-                                        traffic, connect.</p>
-                                    <a href="" class="text-white">Read More <i
-                                            class="uil uil-angle-right-b align-middle"></i></a>
+                                    <p class="mx-auto mb-2 max-w-xl text-white/50">
+                                        Start working with Techwind that can provide everything you
+                                        need to generate awareness, drive traffic, connect.
+                                    </p>
+                                    <a href="" class="text-white">
+                                        Read More <i class="uil uil-angle-right-b align-middle"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -201,16 +303,13 @@ import IndexImagesSlider from "./IndexImagesSlider.astro";
     </div>
     <!--end container-->
 
-    <div class="absolute bottom-0 left-0 right-0 sm:h-2/3 h-4/5 bg-gradient-to-b from-indigo-500 to-indigo-600"></div>
+    <div
+        class="absolute bottom-0 left-0 right-0 h-4/5 bg-gradient-to-b from-indigo-500 to-indigo-600 sm:h-2/3"
+    >
+    </div>
 </section>
 <!--end section-->
 <!-- End -->
-
-
-
-
-
-
 
 <!-- JAVASCRIPTS -->
 <script is:inline src="/assets/libs/tiny-slider/min/tiny-slider.js"></script>

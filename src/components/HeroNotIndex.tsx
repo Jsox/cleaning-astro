@@ -26,16 +26,16 @@ export default function HeroNotIndex({ title, description }: { title: string, de
               aria-current="page"
             >
               {title}
-            </li>
+            </li> 
           </ul>
         </div>
       </section>
-
+   
       <div className="relative">
         <div className="shape absolute right-0 sm:-bottom-px -bottom-[2px] left-0 overflow-hidden z-1 text-white dark:text-slate-900">
           <svg
             className="w-full h-auto"
-            viewBox="0 0 2880 48"
+            viewBox="0 0 2880 48"  
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >

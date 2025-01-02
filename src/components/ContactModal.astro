@@ -1,11 +1,29 @@
 <!-- Start Modal -->
-<div id="contactModal" tabindex="-1" class="fixed z-50 hidden overflow-hidden inset-0 m-auto">
-    <div class="relative w-full h-auto max-w-md p-4">
-        <div class="relative bg-white dark:bg-slate-900 rounded-lg shadow dark:shadow-gray-800">
-            <div class="flex justify-between items-center px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+<div id="contactModal" tabindex="-1" class="fixed inset-0 z-50 m-auto hidden overflow-hidden">
+    <div class="relative h-auto w-full max-w-md p-4">
+        <div class="relative rounded-lg bg-white shadow dark:bg-slate-900 dark:shadow-gray-800">
+            <div
+                class="flex items-center justify-between border-b border-gray-100 px-6 py-4 dark:border-gray-700"
+            >
                 <h5 class="text-xl font-semibold">Contact Form</h5>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="contactModal">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <button
+                    type="button"
+                    class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-toggle="contactModal"
+                >
+                    <svg
+                        class="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                        >
+                        </path>
+                    </svg>
                 </button>
             </div>
             <div class="p-6 text-center">
@@ -13,22 +31,36 @@
                     <p class="mb-0" id="error-msg"></p>
                     <div id="simple-msg"></div>
                     <div class="grid lg:grid-cols-12 lg:gap-6">
-                        <div class="lg:col-span-6 mb-5">
+                        <div class="mb-5 lg:col-span-6">
                             <div class="text-left">
                                 <label for="name" class="font-semibold">Your Name:</label>
                                 <div class="form-icon relative mt-2">
-                                    <i data-feather="user" class="w-4 h-4 absolute top-3 left-4"></i>
-                                    <input name="name" id="name" type="text" class="form-input pl-11" placeholder="Name :">
+                                    <i data-feather="user" class="absolute left-4 top-3 h-4 w-4">
+                                    </i>
+                                    <input
+                                        name="name"
+                                        id="name"
+                                        type="text"
+                                        class="form-input pl-11"
+                                        placeholder="Name :"
+                                    />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="lg:col-span-6 mb-5">
+                        <div class="mb-5 lg:col-span-6">
                             <div class="text-left">
                                 <label for="email" class="font-semibold">Your Email:</label>
                                 <div class="form-icon relative mt-2">
-                                    <i data-feather="mail" class="w-4 h-4 absolute top-3 left-4"></i>
-                                    <input name="email" id="email" type="email" class="form-input pl-11" placeholder="Email :">
+                                    <i data-feather="mail" class="absolute left-4 top-3 h-4 w-4">
+                                    </i>
+                                    <input
+                                        name="email"
+                                        id="email"
+                                        type="email"
+                                        class="form-input pl-11"
+                                        placeholder="Email :"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -39,8 +71,14 @@
                             <div class="text-left">
                                 <label for="subject" class="font-semibold">Your Question:</label>
                                 <div class="form-icon relative mt-2">
-                                    <i data-feather="book" class="w-4 h-4 absolute top-3 left-4"></i>
-                                    <input name="subject" id="subject" class="form-input pl-11" placeholder="Subject :">
+                                    <i data-feather="book" class="absolute left-4 top-3 h-4 w-4">
+                                    </i>
+                                    <input
+                                        name="subject"
+                                        id="subject"
+                                        class="form-input pl-11"
+                                        placeholder="Subject :"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -49,13 +87,30 @@
                             <div class="text-left">
                                 <label for="comments" class="font-semibold">Your Comment:</label>
                                 <div class="form-icon relative mt-2">
-                                    <i data-feather="message-circle" class="w-4 h-4 absolute top-3 left-4"></i>
-                                    <textarea name="comments" id="comments" class="form-input pl-11 h-28" placeholder="Message :"></textarea>
+                                    <i
+                                        data-feather="message-circle"
+                                        class="absolute left-4 top-3 h-4 w-4"
+                                    >
+                                    </i>
+                                    <textarea
+                                        name="comments"
+                                        id="comments"
+                                        class="form-input h-28 pl-11"
+                                        placeholder="Message :"
+                                    >
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" id="submit" name="send" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md justify-center flex items-center">Send Message</button>
+                    <button
+                        type="submit"
+                        id="submit"
+                        name="send"
+                        class="btn flex items-center justify-center rounded-md border-indigo-600 bg-indigo-600 text-white hover:border-indigo-700 hover:bg-indigo-700"
+                    >
+                        Send Message
+                    </button>
                 </form>
             </div>
         </div>

@@ -3,12 +3,9 @@ import IndexPage from '../components/Index/IndexPage.astro';
 import { Pages } from '../data';
 import Layout from '../layouts/Layout.astro';
 
-const { metaTitle, metaDescription } =
-	Pages.find((p) => p.uri === '/') || {};
+const { metaTitle, metaDescription } = Pages.find((p) => p.uri === '/') || {};
 ---
 
-<Layout
-	title={metaTitle || 'Главная'}
-	description={metaDescription || ''}>
-	<IndexPage />
+<Layout title={metaTitle || 'Главная'} description={metaDescription || ''}>
+    <IndexPage />
 </Layout>

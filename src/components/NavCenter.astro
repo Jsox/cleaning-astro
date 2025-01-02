@@ -1,63 +1,45 @@
 ---
 import services from '../services';
 function toggleMenu() {
-	document
-		.getElementById('isToggle')
-		?.classList.toggle('open');
-	const isOpen =
-		document.getElementById('navigation');
+    document.getElementById('isToggle')?.classList.toggle('open');
+    const isOpen = document.getElementById('navigation');
 
-	if (isOpen && isOpen.style) {
-		if (isOpen.style.display === 'block') {
-			isOpen.style.display = 'none';
-		} else {
-			isOpen.style.display = 'block';
-		}
-	}
+    if (isOpen && isOpen.style) {
+        if (isOpen.style.display === 'block') {
+            isOpen.style.display = 'none';
+        } else {
+            isOpen.style.display = 'block';
+        }
+    }
 }
 ---
 
 <!-- Start Navbar -->
-<nav
-	id='topnav'
-	class='defaultscroll is-sticky'>
-	<div class='container'>
-		<!-- Logo container-->
-		<a
-			class='logo pl-0'
-			href='/index.html'>
-			<img
-				src='/assets/images/logo-dark.png'
-				class='inline-block dark:hidden'
-				alt=''
-			/>
-			<img
-				src='/assets/images/logo-light.png'
-				class='hidden dark:inline-block'
-				alt=''
-			/>
-		</a>
+<nav id="topnav" class="defaultscroll is-sticky">
+    <div class="container">
+        <!-- Logo container-->
+        <a class="logo pl-0" href="/index.html">
+            <img src="/assets/images/logo-dark.png" class="inline-block dark:hidden" alt="" />
+            <img src="/assets/images/logo-light.png" class="hidden dark:inline-block" alt="" />
+        </a>
 
-		<!-- End Logo container-->
-		<div class='menu-extras'>
-			<div class='menu-item'>
-				<!-- Mobile menu toggle-->
-				<a
-					class='navbar-toggle'
-					id='isToggle'
-					onclick='toggleMenu()'>
-					<div class='lines'>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</a>
-				<!-- End mobile menu toggle-->
-			</div>
-		</div>
+        <!-- End Logo container-->
+        <div class="menu-extras">
+            <div class="menu-item">
+                <!-- Mobile menu toggle-->
+                <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <!-- End mobile menu toggle-->
+            </div>
+        </div>
 
-		<!--Login button Start-->
-		<!-- <ul class='buy-button list-none mb-0'>
+        <!--Login button Start-->
+        <!-- <ul class='buy-button list-none mb-0'>
 			<li class='inline mb-0'>
 				<a
 					href='/'
@@ -81,43 +63,29 @@ function toggleMenu() {
 				>
 			</li>
 		</ul> -->
-		<!--Login button End-->
+        <!--Login button End-->
 
-		<div id='navigation'>
-			<!-- Navigation Menu-->
-			<ul class='navigation-menu'>
-				<li
-					><a
-						href='/'
-						class='sub-menu-item'
-						>Главная</a
-					></li
-				>
+        <div id="navigation">
+            <!-- Navigation Menu-->
+            <ul class="navigation-menu">
+                <li><a href="/" class="sub-menu-item">Главная</a></li>
 
-				<li
-					class='has-submenu parent-menu-item'>
-					<a href='/services'>Услуги</a>
-					<span class='menu-arrow'
-					></span>
-					<ul class='submenu'>
-						{
-							services.map(
-								(service) => (
-									<li>
-										<a
-											href={`/services/${service.slug}`}
-											class='sub-menu-item'>
-											{
-												service.title
-											}
-										</a>
-									</li>
-								),
-							)
-						}
-					</ul>
-				</li>
-				<!-- <li
+                <li class="has-submenu parent-menu-item">
+                    <a href="/services">Услуги</a>
+                    <span class="menu-arrow"></span>
+                    <ul class="submenu">
+                        {
+                            services.map((service) => (
+                                <li>
+                                    <a href={`/services/${service.slug}`} class="sub-menu-item">
+                                        {service.title}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </li>
+                <!-- <li
 					class='has-submenu parent-parent-menu-item'>
 					<a href='javascript:void(0)'
 						>Landing</a
@@ -1443,15 +1411,10 @@ function toggleMenu() {
 					</ul>
 				</li> -->
 
-				<li
-					><a
-						href='/contact'
-						class='sub-menu-item'
-						>Связаться</a
-					></li
-				>
-			</ul><!--end navigation menu-->
-		</div><!--end navigation-->
-	</div><!--end container-->
+                <li><a href="/about" class="sub-menu-item">О нас</a></li>
+                <li><a href="/contact" class="sub-menu-item">Связаться</a></li>
+            </ul><!--end navigation menu-->
+        </div><!--end navigation-->
+    </div><!--end container-->
 </nav><!--end header-->
 <!-- End Navbar -->

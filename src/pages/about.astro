@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroNotIndex from '../components/HeroNotIndex';
+import { Pages } from '../data';
+
+const { metaTitle, metaDescription } = Pages.find((p) => p.uri === '/about') || {};
+---
+
+<Layout
+    title={metaTitle || 'About Us'}
+    description={metaDescription || 'Learn more about our company and values'}
+>
+    <HeroNotIndex
+        title="О нашей компании"
+        description="Мы - команда профессионалов, преданных своему делу"
+    />
+
+    <!-- Company Overview Section -->
+    <section class="relative py-16 md:py-24">
+        <div class="container">
+            <div class="grid grid-cols-1 items-center gap-[30px] lg:grid-cols-2">
+                <div>
+                    <img
+                        src="/assets/images/about/ab01.jpg"
+                        alt="Our Office"
+                        class="rounded-md shadow-lg"
+                    />
+                </div>
+                <div class="lg:ml-5">
+                    <h3 class="mb-6 text-2xl font-medium leading-normal">Наша история</h3>
+                    <p class="mb-6 text-slate-400">
+                        Мы начали свою деятельность в 2010 году с небольшой команды энтузиастов.
+                        Сегодня мы - одна из ведущих компаний в своей отрасли, обслуживающая тысячи
+                        клиентов по всему миру.
+                    </p>
+                    <p class="mb-6 text-slate-400">
+                        Наша миссия - предоставлять высококачественные услуги, которые превосходят
+                        ожидания наших клиентов.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="relative bg-gray-50 py-16 dark:bg-slate-800 md:py-24">
+        <div class="container">
+            <div class="grid grid-cols-1 text-center">
+                <h3 class="mb-6 text-2xl font-medium leading-normal">Наши ценности</h3>
+            </div>
+            <div class="mt-8 grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
+                <div class="mt-6 px-6 text-center">
+                    <div
+                        class="mx-auto flex h-20 w-20 items-center justify-center rounded-xl bg-indigo-600/5 align-middle text-3xl text-indigo-600 shadow-sm dark:shadow-gray-800"
+                    >
+                        <i class="uil uil-users-alt"></i>
+                    </div>
+                    <div class="content mt-7">
+                        <h5 class="title h5 text-xl font-medium">Клиенты</h5>
+                        <p class="mt-3 text-slate-400">
+                            Мы ставим интересы наших клиентов на первое место
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-6 px-6 text-center">
+                    <div
+                        class="mx-auto flex h-20 w-20 items-center justify-center rounded-xl bg-indigo-600/5 align-middle text-3xl text-indigo-600 shadow-sm dark:shadow-gray-800"
+                    >
+                        <i class="uil uil-shield-check"></i>
+                    </div>
+                    <div class="content mt-7">
+                        <h5 class="title h5 text-xl font-medium">Качество</h5>
+                        <p class="mt-3 text-slate-400">
+                            Мы стремимся к совершенству во всем, что делаем
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-6 px-6 text-center">
+                    <div
+                        class="mx-auto flex h-20 w-20 items-center justify-center rounded-xl bg-indigo-600/5 align-middle text-3xl text-indigo-600 shadow-sm dark:shadow-gray-800"
+                    >
+                        <i class="uil uil-lightbulb-alt"></i>
+                    </div>
+                    <div class="content mt-7">
+                        <h5 class="title h5 text-xl font-medium">Инновации</h5>
+                        <p class="mt-3 text-slate-400">
+                            Мы постоянно развиваемся и внедряем новые технологии
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section class="relative py-16 md:py-24">
+        <div class="container">
+            <div class="grid grid-cols-1 text-center">
+                <h3 class="mb-6 text-2xl font-medium leading-normal">Наши достижения</h3>
+            </div>
+            <div class="mt-8 grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
+                <div class="mt-6 px-6 text-center">
+                    <h2 class="mb-2 text-4xl font-bold">10+</h2>
+                    <h5 class="title h5 text-xl font-medium">Лет опыта</h5>
+                </div>
+                <div class="mt-6 px-6 text-center">
+                    <h2 class="mb-2 text-4xl font-bold">500+</h2>
+                    <h5 class="title h5 text-xl font-medium">Довольных клиентов</h5>
+                </div>
+                <div class="mt-6 px-6 text-center">
+                    <h2 class="mb-2 text-4xl font-bold">50+</h2>
+                    <h5 class="title h5 text-xl font-medium">Профессионалов в команде</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
